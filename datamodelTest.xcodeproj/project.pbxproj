@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,14 +20,13 @@
 		95BBFA9E25650C5200135190 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA9C25650C5200135190 /* TravelTableViewCell.swift */; };
 		95BBFA9F25650C5200135190 /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BBFA9D25650C5200135190 /* TravelTableViewCell.xib */; };
 		95C442E125669D01008011D1 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */; };
-		95C97B3E25660CDD00808ADA /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C97B3D25660CDD00808ADA /* ExchangeRate.swift */; };
 		95C97B402566190100808ADA /* validCountries.json in Resources */ = {isa = PBXBuildFile; fileRef = 95C97B3F2566190100808ADA /* validCountries.json */; };
 		95C97B472566424E00808ADA /* Travel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */; };
 		95C97B4B2566424E00808ADA /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C97B452566424E00808ADA /* Record+CoreDataClass.swift */; };
 		95EEE5B525655A2400F78F3B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5B425655A2400F78F3B /* CountriesViewController.swift */; };
 		95EEE5B825655AC200F78F3B /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5B625655AC200F78F3B /* CountryTableViewCell.swift */; };
 		95EEE5B925655AC200F78F3B /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EEE5B725655AC200F78F3B /* CountryTableViewCell.xib */; };
-		95EEE5BD2565648000F78F3B /* DecodedCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5BC2565648000F78F3B /* DecodedCountry.swift */; };
+		95EEE5BD2565648000F78F3B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5BC2565648000F78F3B /* Models.swift */; };
 		C718E2F1F4CC1216FE61019A /* Pods_datamodelTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DD33D7A5764815F051E973 /* Pods_datamodelTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,14 +61,13 @@
 		95BBFA9C25650C5200135190 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		95BBFA9D25650C5200135190 /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
 		95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95C97B3D25660CDD00808ADA /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		95C97B3F2566190100808ADA /* validCountries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = validCountries.json; path = ../validCountries.json; sourceTree = "<group>"; };
 		95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		95C97B452566424E00808ADA /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
 		95EEE5B425655A2400F78F3B /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		95EEE5B625655AC200F78F3B /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		95EEE5B725655AC200F78F3B /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
-		95EEE5BC2565648000F78F3B /* DecodedCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedCountry.swift; sourceTree = "<group>"; };
+		95EEE5BC2565648000F78F3B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		9BDB613BC4A14F8C26F2801F /* Pods-datamodelTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-datamodelTestTests.release.xcconfig"; path = "Target Support Files/Pods-datamodelTestTests/Pods-datamodelTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C960E3B9DF70A0632F4F1578 /* Pods-datamodelTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-datamodelTestTests.debug.xcconfig"; path = "Target Support Files/Pods-datamodelTestTests/Pods-datamodelTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +109,6 @@
 				C960E3B9DF70A0632F4F1578 /* Pods-datamodelTestTests.debug.xcconfig */,
 				9BDB613BC4A14F8C26F2801F /* Pods-datamodelTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,8 +162,6 @@
 				9579D9282566A34200F5A249 /* TravelListScene */,
 				9579D9272566A33800F5A249 /* CountryListScene */,
 				95C801F025654D1F005EEA67 /* Model */,
-				95EEE5BC2565648000F78F3B /* DecodedCountry.swift */,
-				95C97B3D25660CDD00808ADA /* ExchangeRate.swift */,
 				95BBFA7B2564EDE300135190 /* Main.storyboard */,
 				95BBFA812564EDE900135190 /* Assets.xcassets */,
 				95BBFA832564EDE900135190 /* LaunchScreen.storyboard */,
@@ -191,6 +186,7 @@
 				95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */,
 				95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */,
 				95C97B452566424E00808ADA /* Record+CoreDataClass.swift */,
+				95EEE5BC2565648000F78F3B /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,11 +367,10 @@
 				95EEE5B825655AC200F78F3B /* CountryTableViewCell.swift in Sources */,
 				95BBFA762564EDE300135190 /* AppDelegate.swift in Sources */,
 				95C442E125669D01008011D1 /* Country+CoreDataClass.swift in Sources */,
-				95C97B3E25660CDD00808ADA /* ExchangeRate.swift in Sources */,
 				95BBFA9B2564EE3E00135190 /* Travel.swift in Sources */,
 				95C97B472566424E00808ADA /* Travel+CoreDataClass.swift in Sources */,
 				95C97B4B2566424E00808ADA /* Record+CoreDataClass.swift in Sources */,
-				95EEE5BD2565648000F78F3B /* DecodedCountry.swift in Sources */,
+				95EEE5BD2565648000F78F3B /* Models.swift in Sources */,
 				95EEE5B525655A2400F78F3B /* CountriesViewController.swift in Sources */,
 				95BBFA9E25650C5200135190 /* TravelTableViewCell.swift in Sources */,
 				95BBFA782564EDE300135190 /* SceneDelegate.swift in Sources */,
