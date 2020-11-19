@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="372" id="KGk-i7-Jjw" customClass="CountryTableViewCell" customModule="datamodelTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="848" height="372"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="848" height="372"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-LW-71i">
+                        <rect key="frame" x="20" y="11" width="530.5" height="350"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Kh0-LW-71i" secondAttribute="height" multiplier="1:0.66" id="OqM-g8-ae9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDa-lN-KgJ">
+                        <rect key="frame" x="560.5" y="175.5" width="257.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="WDa-lN-KgJ" secondAttribute="trailing" constant="10" id="66x-Ne-575"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Kh0-LW-71i" secondAttribute="bottom" id="GgK-wf-xKL"/>
+                    <constraint firstItem="Kh0-LW-71i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aHT-J5-vxw"/>
+                    <constraint firstItem="WDa-lN-KgJ" firstAttribute="leading" secondItem="Kh0-LW-71i" secondAttribute="trailing" constant="10" id="dFs-fs-i2q"/>
+                    <constraint firstItem="Kh0-LW-71i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="mLe-bL-132"/>
+                    <constraint firstItem="WDa-lN-KgJ" firstAttribute="centerY" secondItem="Kh0-LW-71i" secondAttribute="centerY" id="wCP-me-5CT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countryName" destination="WDa-lN-KgJ" id="Faf-nb-a9u"/>
+                <outlet property="flagImage" destination="Kh0-LW-71i" id="kqP-no-ObL"/>
+            </connections>
+            <point key="canvasLocation" x="510.14492753623193" y="263.16964285714283"/>
+        </tableViewCell>
+    </objects>
+</document>
