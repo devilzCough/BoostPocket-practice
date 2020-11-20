@@ -11,8 +11,15 @@ import CoreData
 
 class ViewController: UIViewController {
     private var context: NSManagedObjectContext?
+    private var travelProvider: TravelProvidable?
     @IBOutlet weak var tableView: UITableView!
-    var travels: [Travel] = [Travel]()
+    var travelListViewModel: TravelListViewModelProtocol? {
+        didSet {
+            travelListViewModel?.didFetch = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +34,14 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: TravelTableViewCell.identifier, bundle: .main), forCellReuseIdentifier: TravelTableViewCell.identifier)
         
+        travelProvider = TravelProvider(context: context)
+        travelListViewModel = TravelListViewModel(travelProvider: travelProvider!)
         fetchTravels()
     }
     
     
     private func fetchTravels() {
-        // load data from core data
-        do {
-            // update travels datasource
-            self.travels = try context?.fetch(Travel.fetchRequest()) as! [Travel]
-        } catch {
-            print(error.localizedDescription)
-        }
-
-        // reload tableview
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.reloadData()
-        }
+        travelListViewModel?.needFetchItems()
     }
     
     @IBAction func plusButtonTapped(_ sender: UIButton) {
@@ -52,26 +50,10 @@ class ViewController: UIViewController {
         
         countriesViewController.addCountryButtonTapped = { [weak self] (travelTitle, selectedCountry) in
             guard let self = self,
-                let context = self.context,
                 let countryName = selectedCountry.countryName
                 else { return }
-            
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Country")
-            fetchRequest.predicate = NSPredicate(format: "countryName == %@", countryName)
-            
-            do {
-                guard let country = try context.fetch(fetchRequest) as? [Country] else { return }
-                
-                let newTravel = Travel(context: context)
-                newTravel.title = travelTitle
-                newTravel.country = country.first
-                
-                try self.context?.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-            self.fetchTravels()
+
+            self.travelListViewModel?.addTravel(title: travelTitle, countryName: countryName)
         }
         
         let navigationController = UINavigationController(rootViewController: countriesViewController)
@@ -86,13 +68,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return travels.count
+        return travelListViewModel?.numberOfItem() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as? TravelTableViewCell,
+            let travelItemViewModel = travelListViewModel?.cellForItemAt(indexPath: indexPath)
+            else { return UITableViewCell() }
         
-        cell.configure(with: travels[indexPath.row])
+        cell.configure(with: travelItemViewModel)
         
         return cell
     }
@@ -100,27 +84,27 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, _ in
-            guard let `self` = self else { return }
-            
-            // what to remove?
-            let travelToRemove = self.travels[indexPath.row]
-            
-            // remove travel from core data
-            self.context?.delete(travelToRemove)
-            
-            // update core date
-            do {
-                try self.context?.save()
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-            // refetch datasource
-            self.fetchTravels()
-        }
-        
-        return UISwipeActionsConfiguration(actions: [action])
-    }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, _ in
+//            guard let `self` = self else { return }
+//
+//            // what to remove?
+//            let travelToRemove = self.travels[indexPath.row]
+//
+//            // remove travel from core data
+//            self.context?.delete(travelToRemove)
+//
+//            // update core date
+//            do {
+//                try self.context?.save()
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//
+//            // refetch datasource
+//            self.fetchTravels()
+//        }
+//
+//        return UISwipeActionsConfiguration(actions: [action])
+//    }
 }

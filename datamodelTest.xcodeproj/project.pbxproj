@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5B2CC7E517CE93E37AEDDB1A /* Pods_datamodelTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E0E27AAF1999E159CC9DE /* Pods_datamodelTest.framework */; };
+		95062DFD256772C3005416CB /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95062DFC256772C3005416CB /* Record+CoreDataClass.swift */; };
+		95062DFE256772C3005416CB /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95062DFA256772C3005416CB /* Country+CoreDataClass.swift */; };
+		95062DFF256772C3005416CB /* Travel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95062DFB256772C3005416CB /* Travel+CoreDataClass.swift */; };
+		952EA9D0256760E90085C028 /* TravelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952EA9CF256760E90085C028 /* TravelProvider.swift */; };
+		952EA9D2256760F20085C028 /* TravelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952EA9D1256760F20085C028 /* TravelListViewModel.swift */; };
+		952EA9D4256760FA0085C028 /* TravelItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952EA9D3256760FA0085C028 /* TravelItemViewModel.swift */; };
 		95BBFA762564EDE300135190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA752564EDE300135190 /* AppDelegate.swift */; };
 		95BBFA782564EDE300135190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA772564EDE300135190 /* SceneDelegate.swift */; };
 		95BBFA7A2564EDE300135190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA792564EDE300135190 /* ViewController.swift */; };
@@ -16,13 +22,9 @@
 		95BBFA822564EDE900135190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BBFA812564EDE900135190 /* Assets.xcassets */; };
 		95BBFA852564EDE900135190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BBFA832564EDE900135190 /* LaunchScreen.storyboard */; };
 		95BBFA902564EDEA00135190 /* datamodelTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA8F2564EDEA00135190 /* datamodelTestTests.swift */; };
-		95BBFA9B2564EE3E00135190 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA9A2564EE3E00135190 /* Travel.swift */; };
 		95BBFA9E25650C5200135190 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFA9C25650C5200135190 /* TravelTableViewCell.swift */; };
 		95BBFA9F25650C5200135190 /* TravelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BBFA9D25650C5200135190 /* TravelTableViewCell.xib */; };
-		95C442E125669D01008011D1 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */; };
 		95C97B402566190100808ADA /* validCountries.json in Resources */ = {isa = PBXBuildFile; fileRef = 95C97B3F2566190100808ADA /* validCountries.json */; };
-		95C97B472566424E00808ADA /* Travel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */; };
-		95C97B4B2566424E00808ADA /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C97B452566424E00808ADA /* Record+CoreDataClass.swift */; };
 		95EEE5B525655A2400F78F3B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5B425655A2400F78F3B /* CountriesViewController.swift */; };
 		95EEE5B825655AC200F78F3B /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EEE5B625655AC200F78F3B /* CountryTableViewCell.swift */; };
 		95EEE5B925655AC200F78F3B /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EEE5B725655AC200F78F3B /* CountryTableViewCell.xib */; };
@@ -45,6 +47,12 @@
 		242E0E27AAF1999E159CC9DE /* Pods_datamodelTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_datamodelTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD5BC95F987397C2D8E1ED9 /* Pods-datamodelTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-datamodelTest.release.xcconfig"; path = "Target Support Files/Pods-datamodelTest/Pods-datamodelTest.release.xcconfig"; sourceTree = "<group>"; };
 		81DD33D7A5764815F051E973 /* Pods_datamodelTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_datamodelTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95062DFA256772C3005416CB /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Country+CoreDataClass.swift"; path = "/Users/sihyungyou/Desktop/datamodelTest/datamodelTest/Model/Country+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		95062DFB256772C3005416CB /* Travel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Travel+CoreDataClass.swift"; path = "/Users/sihyungyou/Desktop/datamodelTest/datamodelTest/Model/Travel+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		95062DFC256772C3005416CB /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Record+CoreDataClass.swift"; path = "/Users/sihyungyou/Desktop/datamodelTest/datamodelTest/Model/Record+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		952EA9CF256760E90085C028 /* TravelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelProvider.swift; sourceTree = "<group>"; };
+		952EA9D1256760F20085C028 /* TravelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListViewModel.swift; sourceTree = "<group>"; };
+		952EA9D3256760FA0085C028 /* TravelItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelItemViewModel.swift; sourceTree = "<group>"; };
 		95BBFA722564EDE300135190 /* datamodelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = datamodelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BBFA752564EDE300135190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BBFA772564EDE300135190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,13 +65,9 @@
 		95BBFA8B2564EDEA00135190 /* datamodelTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = datamodelTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BBFA8F2564EDEA00135190 /* datamodelTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datamodelTestTests.swift; sourceTree = "<group>"; };
 		95BBFA912564EDEA00135190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95BBFA9A2564EE3E00135190 /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		95BBFA9C25650C5200135190 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		95BBFA9D25650C5200135190 /* TravelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTableViewCell.xib; sourceTree = "<group>"; };
-		95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
 		95C97B3F2566190100808ADA /* validCountries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = validCountries.json; path = ../validCountries.json; sourceTree = "<group>"; };
-		95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Travel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95C97B452566424E00808ADA /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
 		95EEE5B425655A2400F78F3B /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		95EEE5B625655AC200F78F3B /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		95EEE5B725655AC200F78F3B /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
@@ -125,10 +129,12 @@
 		9579D9282566A34200F5A249 /* TravelListScene */ = {
 			isa = PBXGroup;
 			children = (
-				95BBFA9A2564EE3E00135190 /* Travel.swift */,
 				95BBFA792564EDE300135190 /* ViewController.swift */,
 				95BBFA9C25650C5200135190 /* TravelTableViewCell.swift */,
+				952EA9D1256760F20085C028 /* TravelListViewModel.swift */,
+				952EA9D3256760FA0085C028 /* TravelItemViewModel.swift */,
 				95BBFA9D25650C5200135190 /* TravelTableViewCell.xib */,
+				952EA9CF256760E90085C028 /* TravelProvider.swift */,
 			);
 			path = TravelListScene;
 			sourceTree = "<group>";
@@ -183,9 +189,9 @@
 		95C801F025654D1F005EEA67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95C442DF25669D01008011D1 /* Country+CoreDataClass.swift */,
-				95C97B412566424E00808ADA /* Travel+CoreDataClass.swift */,
-				95C97B452566424E00808ADA /* Record+CoreDataClass.swift */,
+				95062DFA256772C3005416CB /* Country+CoreDataClass.swift */,
+				95062DFC256772C3005416CB /* Record+CoreDataClass.swift */,
+				95062DFB256772C3005416CB /* Travel+CoreDataClass.swift */,
 				95EEE5BC2565648000F78F3B /* Models.swift */,
 			);
 			path = Model;
@@ -362,16 +368,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95062DFD256772C3005416CB /* Record+CoreDataClass.swift in Sources */,
 				95BBFA7A2564EDE300135190 /* ViewController.swift in Sources */,
 				95BBFA802564EDE300135190 /* datamodelTest.xcdatamodeld in Sources */,
 				95EEE5B825655AC200F78F3B /* CountryTableViewCell.swift in Sources */,
+				952EA9D2256760F20085C028 /* TravelListViewModel.swift in Sources */,
 				95BBFA762564EDE300135190 /* AppDelegate.swift in Sources */,
-				95C442E125669D01008011D1 /* Country+CoreDataClass.swift in Sources */,
-				95BBFA9B2564EE3E00135190 /* Travel.swift in Sources */,
-				95C97B472566424E00808ADA /* Travel+CoreDataClass.swift in Sources */,
-				95C97B4B2566424E00808ADA /* Record+CoreDataClass.swift in Sources */,
+				95062DFE256772C3005416CB /* Country+CoreDataClass.swift in Sources */,
+				952EA9D0256760E90085C028 /* TravelProvider.swift in Sources */,
 				95EEE5BD2565648000F78F3B /* Models.swift in Sources */,
+				95062DFF256772C3005416CB /* Travel+CoreDataClass.swift in Sources */,
 				95EEE5B525655A2400F78F3B /* CountriesViewController.swift in Sources */,
+				952EA9D4256760FA0085C028 /* TravelItemViewModel.swift in Sources */,
 				95BBFA9E25650C5200135190 /* TravelTableViewCell.swift in Sources */,
 				95BBFA782564EDE300135190 /* SceneDelegate.swift in Sources */,
 			);

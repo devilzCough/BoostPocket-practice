@@ -13,7 +13,7 @@ class TravelTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flagImage: UIImageView!
     
-    func configure(with travel: Travel) {
+    func configure(with travel: TravelItemViewModel) {
         self.nameLabel.text = travel.title
     }
 }

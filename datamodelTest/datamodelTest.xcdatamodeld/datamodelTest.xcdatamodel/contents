@@ -22,7 +22,7 @@
     </entity>
     <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="category">
         <attribute name="budget" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="coverImage" optional="YES" attributeType="String"/>
+        <attribute name="coverImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="currencyCode" optional="YES" attributeType="String"/>
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="exchangeRate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
